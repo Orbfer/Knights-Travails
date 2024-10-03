@@ -1,3 +1,0 @@
-function createBoardScript() {
-  const columnArray = [];
-}

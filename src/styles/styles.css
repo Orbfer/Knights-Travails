@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+:root {
+  --mainColor: #6f4e37;
+  --secondaryColor: #a67b5b;
+  --thirdColor: #ecb176;
+  --textColor: #fed8b1;
+  --mainText: "Cinzel";
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--mainColor);
+  font-family: var(--mainText);
+  color: var(--textColor);
+}
+#page {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  gap: 1em;
+}
+#header {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#title {
+  font-size: 2em;
+}
