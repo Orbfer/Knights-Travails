@@ -19,7 +19,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 3fr 2fr;
   gap: 1em;
 }
 #header {
@@ -30,4 +30,56 @@ body {
 }
 #title {
   font-size: 2em;
+}
+#board-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, fr);
+  margin: 2em;
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dark {
+  background-color: var(--secondaryColor);
+}
+.light {
+  background-color: var(--thirdColor);
+}
+#buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.btn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 75%;
+  height: 50%;
+  font-family: var(--mainText);
+  background-color: #4a4947;
+  color: var(--textColor);
+  border-color: var(--thirdColor);
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+  transform: translateY(-10px);
+  background-color: var(--textColor);
+  color: #4a4947;
+}
+.btn:active {
+  background-color: #4a4947;
+  color: var(--textColor);
 }
