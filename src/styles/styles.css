@@ -3,6 +3,7 @@
   --mainColor: #6f4e37;
   --secondaryColor: #a67b5b;
   --thirdColor: #ecb176;
+  --fourthColor: #4a4947;
   --textColor: #fed8b1;
   --mainText: "Cinzel";
 }
@@ -41,7 +42,7 @@ body {
   height: 80%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, fr);
+  grid-template-rows: repeat(8, 1fr);
   margin: 2em;
 }
 .square {
@@ -69,7 +70,7 @@ body {
   width: 75%;
   height: 50%;
   font-family: var(--mainText);
-  background-color: #4a4947;
+  background-color: var(--fourthColor);
   color: var(--textColor);
   border-color: var(--thirdColor);
   transition: transform 0.3s, background-color 0.3s, color 0.3s;
@@ -77,9 +78,13 @@ body {
 .btn:hover {
   transform: translateY(-10px);
   background-color: var(--textColor);
-  color: #4a4947;
+  color: var(--fourthColor);
 }
 .btn:active {
-  background-color: #4a4947;
+  background-color: var(--fourthColor);
   color: var(--textColor);
+}
+#knight-icon {
+  width: 80%;
+  height: 80%;
 }

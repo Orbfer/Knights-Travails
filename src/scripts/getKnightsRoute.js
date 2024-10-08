@@ -15,7 +15,6 @@ function getKnightsRoute(start, end) {
     if (currentPosition[0] === end[0] && currentPosition[1] === end[1]) {
       console.log("Shortest path:", path);
       console.log("Number of steps:", path.length - 1);
-      console.log(queue);
       return path;
     }
 
