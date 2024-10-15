@@ -33,10 +33,10 @@ function getKnightsRoute(start, end) {
 
 function isValid([x, y]) {
   return (
-    x >= 0 &&
-    x < 8 &&
-    y >= 0 &&
-    y < 8 &&
+    x >= 1 &&
+    x <= 8 &&
+    y >= 1 &&
+    y <= 8 &&
     !visitedSquares.includes([x, y].toString())
   );
 }
