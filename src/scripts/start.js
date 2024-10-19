@@ -21,6 +21,9 @@ function animatePath(path) {
       moveAnimation(path[i - 1], path[i]);
       i++;
       setTimeout(animateStep, 1000);
+    } else {
+      const moveLog = document.querySelector("#move-log");
+      moveLog.textContent = `Number of moves took: ${path.length}`;
     }
   }
   animateStep();

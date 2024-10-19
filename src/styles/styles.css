@@ -34,16 +34,24 @@ body {
 }
 #board-cont {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1em;
 }
 #board {
-  width: 100%;
+  width: 83.335%;
   height: 80%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  margin: 2em;
+}
+
+#move-log-cont {
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 .square {
   display: flex;
