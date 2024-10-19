@@ -23,3 +23,10 @@ function pickEndPoint(event) {
 }
 export default pickEnd;
 export { endPoint };
+export { endPointPicked };
+export function setEndPoint(position) {
+  endPoint = position;
+}
+export function setEndPointPicked(value) {
+  endPointPicked = value;
+}

@@ -27,3 +27,10 @@ function pickSpot(event) {
 }
 export default placeKnight;
 export { knightPos };
+export { knightPlaced };
+export function setKnightPlaced(value) {
+  knightPlaced = value;
+}
+export function setKnightPos(position) {
+  knightPos = position;
+}
