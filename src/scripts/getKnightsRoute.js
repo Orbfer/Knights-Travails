@@ -13,8 +13,6 @@ function getKnightsRoute(start, end) {
     const currentPosition = path[path.length - 1];
 
     if (currentPosition[0] === end[0] && currentPosition[1] === end[1]) {
-      console.log("Shortest path:", path);
-      console.log("Number of steps:", path.length - 1);
       return path;
     }
 
@@ -27,8 +25,6 @@ function getKnightsRoute(start, end) {
       }
     }
   }
-
-  console.error("No path found.");
 }
 
 function isValid([x, y]) {

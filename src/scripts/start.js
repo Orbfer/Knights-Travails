@@ -23,7 +23,7 @@ function animatePath(path) {
       setTimeout(animateStep, 1000);
     } else {
       const moveLog = document.querySelector("#move-log");
-      moveLog.textContent = `Number of moves took: ${path.length}`;
+      moveLog.textContent = `Number of moves took: ${path.length - 1}`;
     }
   }
   animateStep();
