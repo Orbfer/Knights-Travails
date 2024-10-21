@@ -3,8 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <script defer src="main.js"></script>
-  </head>
-  <body></body>
+    <title>Knights Travails</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <audio
+      id="background-music"
+      src="/music/backgroundmusic.mp3"
+      autoplay
+      loop
+    ></audio>
+    <div class="animate__animated animate__fadeIn" id="page">
+      <div id="header">
+        <div id="title">Knights Travails</div>
+      </div>
+      <div id="board-cont">
+        <div id="board">
+          <div class="square light" dataX="8" dataY="1"></div>
+          <div class="square dark" dataX="8" dataY="2"></div>
+          <div class="square light" dataX="8" dataY="3"></div>
+          <div class="square dark" dataX="8" dataY="4"></div>
+          <div class="square light" dataX="8" dataY="5"></div>
+          <div class="square dark" dataX="8" dataY="6"></div>
+          <div class="square light" dataX="8" dataY="7"></div>
+          <div class="square dark" dataX="8" dataY="8"></div>
+          <div class="square dark" dataX="7" dataY="1"></div>
+          <div class="square light" dataX="7" dataY="2"></div>
+          <div class="square dark" dataX="7" dataY="3"></div>
+          <div class="square light" dataX="7" dataY="4"></div>
+          <div class="square dark" dataX="7" dataY="5"></div>
+          <div class="square light" dataX="7" dataY="6"></div>
+          <div class="square dark" dataX="7" dataY="7"></div>
+          <div class="square light" dataX="7" dataY="8"></div>
+          <div class="square light" dataX="6" dataY="1"></div>
+          <div class="square dark" dataX="6" dataY="2"></div>
+          <div class="square light" dataX="6" dataY="3"></div>
+          <div class="square dark" dataX="6" dataY="4"></div>
+          <div class="square light" dataX="6" dataY="5"></div>
+          <div class="square dark" dataX="6" dataY="6"></div>
+          <div class="square light" dataX="6" dataY="7"></div>
+          <div class="square dark" dataX="6" dataY="8"></div>
+          <div class="square dark" dataX="5" dataY="1"></div>
+          <div class="square light" dataX="5" dataY="2"></div>
+          <div class="square dark" dataX="5" dataY="3"></div>
+          <div class="square light" dataX="5" dataY="4"></div>
+          <div class="square dark" dataX="5" dataY="5"></div>
+          <div class="square light" dataX="5" dataY="6"></div>
+          <div class="square dark" dataX="5" dataY="7"></div>
+          <div class="square light" dataX="5" dataY="8"></div>
+          <div class="square light" dataX="4" dataY="1"></div>
+          <div class="square dark" dataX="4" dataY="2"></div>
+          <div class="square light" dataX="4" dataY="3"></div>
+          <div class="square dark" dataX="4" dataY="4"></div>
+          <div class="square light" dataX="4" dataY="5"></div>
+          <div class="square dark" dataX="4" dataY="6"></div>
+          <div class="square light" dataX="4" dataY="7"></div>
+          <div class="square dark" dataX="4" dataY="8"></div>
+          <div class="square dark" dataX="3" dataY="1"></div>
+          <div class="square light" dataX="3" dataY="2"></div>
+          <div class="square dark" dataX="3" dataY="3"></div>
+          <div class="square light" dataX="3" dataY="4"></div>
+          <div class="square dark" dataX="3" dataY="5"></div>
+          <div class="square light" dataX="3" dataY="6"></div>
+          <div class="square dark" dataX="3" dataY="7"></div>
+          <div class="square light" dataX="3" dataY="8"></div>
+          <div class="square light" dataX="2" dataY="1"></div>
+          <div class="square dark" dataX="2" dataY="2"></div>
+          <div class="square light" dataX="2" dataY="3"></div>
+          <div class="square dark" dataX="2" dataY="4"></div>
+          <div class="square light" dataX="2" dataY="5"></div>
+          <div class="square dark" dataX="2" dataY="6"></div>
+          <div class="square light" dataX="2" dataY="7"></div>
+          <div class="square dark" dataX="2" dataY="8"></div>
+          <div class="square dark" dataX="1" dataY="1"></div>
+          <div class="square light" dataX="1" dataY="2"></div>
+          <div class="square dark" dataX="1" dataY="3"></div>
+          <div class="square light" dataX="1" dataY="4"></div>
+          <div class="square dark" dataX="1" dataY="5"></div>
+          <div class="square light" dataX="1" dataY="6"></div>
+          <div class="square dark" dataX="1" dataY="7"></div>
+          <div class="square light" dataX="1" dataY="8"></div>
+        </div>
+        <div id="move-log-cont">
+          <div id="move-log">Number of moves took:</div>
+        </div>
+      </div>
+      <div id="buttons">
+        <div class="btn-cont">
+          <button class="btn" id="place-btn">Place Knight</button>
+        </div>
+        <div class="btn-cont">
+          <button class="btn" id="endpoint-btn">Pick End</button>
+        </div>
+        <div class="btn-cont">
+          <button class="btn" id="start-btn">Start</button>
+        </div>
+        <div class="btn-cont">
+          <button class="btn" id="clear-btn">Clear Board</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
