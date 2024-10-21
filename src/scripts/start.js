@@ -30,46 +30,49 @@ function animatePath(path) {
 }
 function moveAnimation(start, end) {
   const knight = document.querySelector("#knight-icon");
+  const board = document.querySelector("#board");
+  const boardWidth = board.offsetWidth;
+  const boardHeight = board.offsetHeight;
   const deltaY = end[0] - start[0];
   const deltaX = end[1] - start[1];
   if (deltaX === 1 && deltaY === 2) {
-    translateX = 40;
-    translateY = -80;
+    translateX = boardWidth / 8;
+    translateY = boardHeight / -4;
     knightPos[1] += 1;
     knightPos[0] += 2;
   } else if (deltaX === 1 && deltaY === -2) {
-    translateX = 40;
-    translateY = 80;
+    translateX = boardWidth / 8;
+    translateY = boardHeight / 4;
     knightPos[1] += 1;
     knightPos[0] -= 2;
   } else if (deltaX === -1 && deltaY === 2) {
-    translateX = -40;
-    translateY = -80;
+    translateX = boardWidth / -8;
+    translateY = boardHeight / -4;
     knightPos[1] -= 1;
     knightPos[0] += 2;
   } else if (deltaX === -1 && deltaY === -2) {
-    translateX = -40;
-    translateY = 80;
+    translateX = boardWidth / -8;
+    translateY = boardHeight / 4;
     knightPos[1] -= 1;
     knightPos[0] -= 2;
   } else if (deltaX === 2 && deltaY === 1) {
-    translateX = 80;
-    translateY = -40;
+    translateX = boardWidth / 4;
+    translateY = boardHeight / -8;
     knightPos[1] += 2;
     knightPos[0] += 1;
   } else if (deltaX === 2 && deltaY === -1) {
-    translateX = 80;
-    translateY = 40;
+    translateX = boardWidth / 4;
+    translateY = boardHeight / 8;
     knightPos[1] += 2;
     knightPos[0] -= 1;
   } else if (deltaX === -2 && deltaY === 1) {
-    translateX = -80;
-    translateY = -40;
+    translateX = boardWidth / -4;
+    translateY = boardHeight / -8;
     knightPos[1] -= 2;
     knightPos[0] += 1;
   } else if (deltaX === -2 && deltaY === -1) {
-    translateX = -80;
-    translateY = 40;
+    translateX = boardWidth / -4;
+    translateY = boardHeight / 8;
     knightPos[1] -= 2;
     knightPos[0] -= 1;
   }
