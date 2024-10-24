@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   knightPlaced: () => (/* binding */ knightPlaced),\n/* harmony export */   knightPos: () => (/* binding */ knightPos),\n/* harmony export */   setKnightPlaced: () => (/* binding */ setKnightPlaced),\n/* harmony export */   setKnightPos: () => (/* binding */ setKnightPos)\n/* harmony export */ });\n/* harmony import */ var _imgs_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imgs/chess-knight-svgrepo-com.svg */ \"./src/scripts/imgs/chess-knight-svgrepo-com.svg\");\n\r\nconst squares = document.querySelectorAll(\".square\");\r\nlet knightPlaced = false;\r\nlet knightPos = [];\r\nfunction placeKnight() {\r\n  if (knightPlaced) return;\r\n  else {\r\n    for (const square of squares) {\r\n      square.addEventListener(\"click\", pickSpot);\r\n    }\r\n    knightPlaced = true;\r\n  }\r\n}\r\nfunction pickSpot(event) {\r\n  const square = event.currentTarget;\r\n  const knightIcon = document.createElement(\"img\");\r\n  knightIcon.id = \"knight-icon\";\r\n  knightIcon.src = _imgs_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__;\r\n  knightIcon.alt = \"Knight\";\r\n  square.append(knightIcon);\r\n  knightPos = [\r\n    Number(square.attributes[1].value),\r\n    Number(square.attributes[2].value),\r\n  ];\r\n  for (const square of squares) {\r\n    square.removeEventListener(\"click\", pickSpot);\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (placeKnight);\r\n\r\n\r\nfunction setKnightPlaced(value) {\r\n  knightPlaced = value;\r\n}\r\nfunction setKnightPos(position) {\r\n  knightPos = position;\r\n}\r\n\n\n//# sourceURL=webpack://knights-travails/./src/scripts/placeKnight.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   knightPlaced: () => (/* binding */ knightPlaced),\n/* harmony export */   knightPos: () => (/* binding */ knightPos),\n/* harmony export */   setKnightPlaced: () => (/* binding */ setKnightPlaced),\n/* harmony export */   setKnightPos: () => (/* binding */ setKnightPos)\n/* harmony export */ });\n/* harmony import */ var _assets_images_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/images/chess-knight-svgrepo-com.svg */ \"./assets/images/chess-knight-svgrepo-com.svg\");\n\r\nconst squares = document.querySelectorAll(\".square\");\r\nlet knightPlaced = false;\r\nlet knightPos = [];\r\nfunction placeKnight() {\r\n  if (knightPlaced) return;\r\n  else {\r\n    for (const square of squares) {\r\n      square.addEventListener(\"click\", pickSpot);\r\n    }\r\n    knightPlaced = true;\r\n  }\r\n}\r\nfunction pickSpot(event) {\r\n  const square = event.currentTarget;\r\n  const knightIcon = document.createElement(\"img\");\r\n  knightIcon.id = \"knight-icon\";\r\n  knightIcon.src = _assets_images_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__;\r\n  knightIcon.alt = \"Knight\";\r\n  square.append(knightIcon);\r\n  knightPos = [\r\n    Number(square.attributes[1].value),\r\n    Number(square.attributes[2].value),\r\n  ];\r\n  for (const square of squares) {\r\n    square.removeEventListener(\"click\", pickSpot);\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (placeKnight);\r\n\r\n\r\nfunction setKnightPlaced(value) {\r\n  knightPlaced = value;\r\n}\r\nfunction setKnightPos(position) {\r\n  knightPos = position;\r\n}\r\n\n\n//# sourceURL=webpack://knights-travails/./src/scripts/placeKnight.js?");
 
 /***/ }),
 
@@ -190,13 +190,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/scripts/imgs/chess-knight-svgrepo-com.svg":
-/*!*******************************************************!*\
-  !*** ./src/scripts/imgs/chess-knight-svgrepo-com.svg ***!
-  \*******************************************************/
+/***/ "./assets/images/chess-knight-svgrepo-com.svg":
+/*!****************************************************!*\
+  !*** ./assets/images/chess-knight-svgrepo-com.svg ***!
+  \****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"26d02f22d42fe19fe70e.svg\";\n\n//# sourceURL=webpack://knights-travails/./src/scripts/imgs/chess-knight-svgrepo-com.svg?");
+eval("module.exports = __webpack_require__.p + \"5a77b12ac8e4ac79b35f.svg\";\n\n//# sourceURL=webpack://knights-travails/./assets/images/chess-knight-svgrepo-com.svg?");
 
 /***/ })
 
