@@ -196,7 +196,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"5a77b12ac8e4ac79b35f.svg\";\n\n//# sourceURL=webpack://knights-travails/./assets/images/chess-knight-svgrepo-com.svg?");
+eval("module.exports = __webpack_require__.p + \"26d02f22d42fe19fe70e.svg\";\n\n//# sourceURL=webpack://knights-travails/./assets/images/chess-knight-svgrepo-com.svg?");
 
 /***/ })
 
