@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   knightPlaced: () => (/* binding */ knightPlaced),\n/* harmony export */   knightPos: () => (/* binding */ knightPos),\n/* harmony export */   setKnightPlaced: () => (/* binding */ setKnightPlaced),\n/* harmony export */   setKnightPos: () => (/* binding */ setKnightPos)\n/* harmony export */ });\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module '../assets/images/chess-knight-svgrepo-com.svg'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\r\nconst squares = document.querySelectorAll(\".square\");\r\nlet knightPlaced = false;\r\nlet knightPos = [];\r\nfunction placeKnight() {\r\n  if (knightPlaced) return;\r\n  else {\r\n    for (const square of squares) {\r\n      square.addEventListener(\"click\", pickSpot);\r\n    }\r\n    knightPlaced = true;\r\n  }\r\n}\r\nfunction pickSpot(event) {\r\n  const square = event.currentTarget;\r\n  const knightIcon = document.createElement(\"img\");\r\n  knightIcon.id = \"knight-icon\";\r\n  knightIcon.src = Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '../assets/images/chess-knight-svgrepo-com.svg'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\n  knightIcon.alt = \"Knight\";\r\n  square.append(knightIcon);\r\n  knightPos = [\r\n    Number(square.attributes[1].value),\r\n    Number(square.attributes[2].value),\r\n  ];\r\n  for (const square of squares) {\r\n    square.removeEventListener(\"click\", pickSpot);\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (placeKnight);\r\n\r\n\r\nfunction setKnightPlaced(value) {\r\n  knightPlaced = value;\r\n}\r\nfunction setKnightPos(position) {\r\n  knightPos = position;\r\n}\r\n\n\n//# sourceURL=webpack://knights-travails/./src/scripts/placeKnight.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   knightPlaced: () => (/* binding */ knightPlaced),\n/* harmony export */   knightPos: () => (/* binding */ knightPos),\n/* harmony export */   setKnightPlaced: () => (/* binding */ setKnightPlaced),\n/* harmony export */   setKnightPos: () => (/* binding */ setKnightPos)\n/* harmony export */ });\n/* harmony import */ var _assets_images_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/images/chess-knight-svgrepo-com.svg */ \"./assets/images/chess-knight-svgrepo-com.svg\");\n\r\nconst squares = document.querySelectorAll(\".square\");\r\nlet knightPlaced = false;\r\nlet knightPos = [];\r\nfunction placeKnight() {\r\n  if (knightPlaced) return;\r\n  else {\r\n    for (const square of squares) {\r\n      square.addEventListener(\"click\", pickSpot);\r\n    }\r\n    knightPlaced = true;\r\n  }\r\n}\r\nfunction pickSpot(event) {\r\n  const square = event.currentTarget;\r\n  const knightIcon = document.createElement(\"img\");\r\n  knightIcon.id = \"knight-icon\";\r\n  knightIcon.src = _assets_images_chess_knight_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_0__;\r\n  knightIcon.alt = \"Knight\";\r\n  square.append(knightIcon);\r\n  knightPos = [\r\n    Number(square.attributes[1].value),\r\n    Number(square.attributes[2].value),\r\n  ];\r\n  for (const square of squares) {\r\n    square.removeEventListener(\"click\", pickSpot);\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (placeKnight);\r\n\r\n\r\nfunction setKnightPlaced(value) {\r\n  knightPlaced = value;\r\n}\r\nfunction setKnightPos(position) {\r\n  knightPos = position;\r\n}\r\n\n\n//# sourceURL=webpack://knights-travails/./src/scripts/placeKnight.js?");
 
 /***/ }),
 
@@ -187,6 +187,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getKnightsRoute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getKnightsRoute */ \"./src/scripts/getKnightsRoute.js\");\n/* harmony import */ var _pickEnd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pickEnd */ \"./src/scripts/pickEnd.js\");\n/* harmony import */ var _placeKnight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./placeKnight */ \"./src/scripts/placeKnight.js\");\n\r\n\r\n\r\nconst knightSquare = document.querySelector(\"#knight-square\");\r\nlet translateX = 0;\r\nlet translateY = 0;\r\nfunction startMoves() {\r\n  console.log(\"knightPos:\", _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos);\r\n  console.log(\"endPoint:\", _pickEnd__WEBPACK_IMPORTED_MODULE_1__.endPoint);\r\n  if (_placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos.length === 0 || _pickEnd__WEBPACK_IMPORTED_MODULE_1__.endPoint.length === 0)\r\n    alert(\"You have to pick a start and an end point.\");\r\n  else {\r\n    const path = (0,_getKnightsRoute__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(_placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos, _pickEnd__WEBPACK_IMPORTED_MODULE_1__.endPoint);\r\n    animatePath(path);\r\n  }\r\n}\r\nfunction animatePath(path) {\r\n  let i = 1;\r\n  function animateStep() {\r\n    if (i < path.length) {\r\n      moveAnimation(path[i - 1], path[i]);\r\n      i++;\r\n      setTimeout(animateStep, 1000);\r\n    } else {\r\n      const moveLog = document.querySelector(\"#move-log\");\r\n      moveLog.textContent = `Number of moves took: ${path.length - 1}`;\r\n    }\r\n  }\r\n  animateStep();\r\n}\r\nfunction moveAnimation(start, end) {\r\n  const knight = document.querySelector(\"#knight-icon\");\r\n  const board = document.querySelector(\"#board\");\r\n  const boardWidth = board.offsetWidth;\r\n  const boardHeight = board.offsetHeight;\r\n  const deltaY = end[0] - start[0];\r\n  const deltaX = end[1] - start[1];\r\n  if (deltaX === 1 && deltaY === 2) {\r\n    translateX = boardWidth / 8;\r\n    translateY = boardHeight / -4;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] += 1;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] += 2;\r\n  } else if (deltaX === 1 && deltaY === -2) {\r\n    translateX = boardWidth / 8;\r\n    translateY = boardHeight / 4;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] += 1;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] -= 2;\r\n  } else if (deltaX === -1 && deltaY === 2) {\r\n    translateX = boardWidth / -8;\r\n    translateY = boardHeight / -4;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] -= 1;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] += 2;\r\n  } else if (deltaX === -1 && deltaY === -2) {\r\n    translateX = boardWidth / -8;\r\n    translateY = boardHeight / 4;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] -= 1;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] -= 2;\r\n  } else if (deltaX === 2 && deltaY === 1) {\r\n    translateX = boardWidth / 4;\r\n    translateY = boardHeight / -8;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] += 2;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] += 1;\r\n  } else if (deltaX === 2 && deltaY === -1) {\r\n    translateX = boardWidth / 4;\r\n    translateY = boardHeight / 8;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] += 2;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] -= 1;\r\n  } else if (deltaX === -2 && deltaY === 1) {\r\n    translateX = boardWidth / -4;\r\n    translateY = boardHeight / -8;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] -= 2;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] += 1;\r\n  } else if (deltaX === -2 && deltaY === -1) {\r\n    translateX = boardWidth / -4;\r\n    translateY = boardHeight / 8;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1] -= 2;\r\n    _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] -= 1;\r\n  }\r\n\r\n  knight.style.transform = `translate(${translateX}px, ${translateY}px)`;\r\n  knight.addEventListener(\"transitionend\", changeKnightPos, { once: true });\r\n}\r\nfunction changeKnightPos() {\r\n  translateX = 0;\r\n  translateY = 0;\r\n  const knight = document.querySelector(\"#knight-icon\");\r\n  const squares = document.querySelectorAll(\".square\");\r\n  knight.remove();\r\n  for (const square of squares) {\r\n    if (\r\n      square.getAttribute(\"dataX\") == _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[0] &&\r\n      square.getAttribute(\"dataY\") == _placeKnight__WEBPACK_IMPORTED_MODULE_2__.knightPos[1]\r\n    ) {\r\n      square.append(knight);\r\n      square.style.backgroundColor = \"#2d862d\";\r\n      knight.style.transform = `translate(${translateX}px, ${translateY}px)`;\r\n    }\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (startMoves);\r\n\n\n//# sourceURL=webpack://knights-travails/./src/scripts/start.js?");
+
+/***/ }),
+
+/***/ "./assets/images/chess-knight-svgrepo-com.svg":
+/*!****************************************************!*\
+  !*** ./assets/images/chess-knight-svgrepo-com.svg ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"26d02f22d42fe19fe70e.svg\";\n\n//# sourceURL=webpack://knights-travails/./assets/images/chess-knight-svgrepo-com.svg?");
 
 /***/ })
 
@@ -241,6 +251,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -255,6 +277,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
