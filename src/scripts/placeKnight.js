@@ -1,3 +1,4 @@
+import knightImage from "../assets/images/chess-knight-svgrepo-com.svg";
 const squares = document.querySelectorAll(".square");
 let knightPlaced = false;
 let knightPos = [];
@@ -14,7 +15,7 @@ function pickSpot(event) {
   const square = event.currentTarget;
   const knightIcon = document.createElement("img");
   knightIcon.id = "knight-icon";
-  knightIcon.src = "/imgs/chess-knight-svgrepo-com.svg";
+  knightIcon.src = knightImage;
   knightIcon.alt = "Knight";
   square.append(knightIcon);
   knightPos = [
